@@ -143,7 +143,7 @@ def cntN(procent,part): # gets number out of part and procent
 	num=part/procent*100
 	print('If '+str(procent)+'% of number is '+str(part)+', then the number is '+str((part/(procent)*100)))
 
-def getH(cat,cath): # gets the hypothenusis of a right-angled triangle by Pithagora's theorem
+def getH(cat,cath): # gets the hypothenusis of a right-angled triangle by Pythagorus' theorem
 	hyp=sqrt((cath*cath)+(cat*cat)) # double brackets aren't necessary, by the way
 	print("Hypothenusis of the given triangle is: "+str(hyp))
 def getC(hyp,cath): # same as one above, just reverse
