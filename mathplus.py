@@ -137,40 +137,46 @@ def sdtr(num,nm,nnm): # gets the smallest divider of three numbers
 
 def cntP(num,procent): # gets part of number and procent
 	prt=(procent/100)*num
-	print(str(procent)+'% of '+str(num)+' is '+str(prt))
+	return prt
 def cntPR(num,part): # gets procent of number and part
 	proc=(part/num)*100
-	print(str(part)+' of '+str(num)+' is '+str(proc)+'%')
+	return proc
 def cntN(procent,part): # gets number out of part and procent
 	num=part/procent*100
-	print('If '+str(procent)+'% of number is '+str(part)+', then the number is '+str((part/(procent)*100)))
+	return num
 
-def getH(cat,cath): # gets the hypothenusis of a right-angled triangle by Pythagorus' theorem
-	hyp=sqrt((cath*cath)+(cat*cat)) # double brackets aren't necessary, by the way
-	print("Hypothenusis of the given triangle is: "+str(hyp))
-def getC(hyp,cath): # same as one above, just reverse
+def getH(cat,cath): # gets the hypothenusis of a right-angled triangle by the Pythagorus' theorem
+	hyp=sqrt((cath*cath)+(cat*cat)) # double brackets aren't necessary, btw
+	return hyp
+def getC(hyp,cath): # same as the one above, just reverse
 	cat=sqrt((hyp*hyp)-(cath*cath))
-	print("The second cathete of the given triangle is "+str(cat))
+	return cat
 
 def root(num,pw): # gets Nth root of a number
 	return pow(num,1/pw)
 def numcomb(charpos,charnum): #essentially just x^y
 	return charpos**charnum
+def average(*args,round_digits=2): # 
+	s=0
+	for i in args:
+		s+=i
+	return round(s/len(args),round_digits)
 if __name__ == '__main__':
-	print("Function summary:")
-	print("divide(divided,divider) - checks if the dividing result gives an intreger")
-	print("numbet(start,end) - prints numbers between $start and $end")
-	print("numbetODD(start,end);numbetEVEN(start,end) - self-explanatory")
-	print('sd(number) - smallest divider of number')
-	print("sdt(num1,num2) - smallest divider of 2 numbers")
-	print("sdtr(num1,num2,num3) - smallest divider of 3 numbers")
-	print('sc(number1,number2) - smallest condensor of two numbers')
-	print('sct(number1,number2,number3) - smallest condensor of 3 numbers')
-	print('cntPR(number,part) - procent from part and number')
-	print("""cntN(procent,part) - number from procent and part
-		cntP(number,procent) - part from number and procent
-		getH(cathete1,cathete2) - hypothenusys from 2 cathetes
-		getC(hypothenusys,cathete2) - cathete from hypothenusys and other cathete
-        root(number,power) - gets Nth root of a number(ex. root(27,3) - 3; root(81,2) - 9)
+	print("""Function list:
+	divide(divided,divider) - checks if the dividing result gives an intreger
+	numbet(start,end) - prints numbers between $start and $end
+	numbetODD(start,end);numbetEVEN(start,end) - self-explanatory
+	sd(number) - smallest divider of number
+	sdt(num1,num2) - smallest divider of 2 numbers
+	sdtr(num1,num2,num3) - smallest divider of 3 numbers
+	sc(number1,number2) - smallest condensor of two numbers
+	sct(number1,number2,number3) - smallest condensor of 3 numbers
+	cntPR(number,part) - procent from part and number
+	cntN(procent,part) - number from procent and part
+	cntP(number,procent) - part from number and procent
+	getH(cathete1,cathete2) - hypothenusis from 2 cathetes
+	getC(hypothenusys,cathete2) - cathete from hypothenusys and other cathete
+	root(number,power) - gets Nth root of a number(ex. root(27,3) - 3; root(81,2) - 9)
 	numcomb(charpos,charnum) - get number of possible combinations of X repeatable characters written Y times
+	average(*n) - return the average value of all the arguments
         """)
