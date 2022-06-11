@@ -3,8 +3,7 @@ Extension of the 'math' module for Python, written in Python, tested in Python a
 It aims to expand the standard math module(tho it might add duplicates).
 
 ```python
-'''
-Function list:\n
+Function list:
 divide(divided,divider) - checks if the dividing result gives an intreger
 numbet(start,end) - prints numbers between $start and $end
 numbetODD(start,end);numbetEVEN(start,end) - self-explanatory
@@ -21,5 +20,4 @@ getC(hypothenusys,cathete2) - cathete from hypothenusys and other cathete
 root(number,power) - gets Nth root of a number(ex. root(27,3) - 3; root(81,2) - 9)
 numcomb(charpos,charnum) - get number of possible combinations of X repeatable characters written Y times
 average(\*n) - return the average value of all the arguments
-'''
 ```
