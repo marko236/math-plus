@@ -19,5 +19,5 @@ Function list:
   getC(hypothenusys,cathete2) - cathete from hypothenusys and other cathete
   root(number,power) - gets Nth root of a number(ex. root(27,3) - 3; root(81,2) - 9)
   numcomb(charpos,charnum) - get number of possible combinations of X repeatable characters written Y times
-  average(\*n) - return the average value of all the arguments
+  average(*n) - return the average value of all the arguments
 ```
