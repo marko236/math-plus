@@ -25,7 +25,7 @@ def numbet(star,end): # counts all numbers between X(star) and Y(end)
 	i=0
 	for num in range(star,endd):
 		i=i+1
-	print('There is/are '+str(i)+' number(s) between '+str(star)+' and '+str(end))
+	return i
 
 def numbetEVEN(star,end):# counts even numbers between X(star) and Y(end)
 	endd=end+1
@@ -35,7 +35,7 @@ def numbetEVEN(star,end):# counts even numbers between X(star) and Y(end)
 			i=i+1
 		else:
 			pass
-	print('There is/are '+str(i)+' even number(s) between',str(star),'and',str(end))
+	return i
 
 def numbetODD(star,end): # counts odd numbers between X(star) and Y(end)
 	i=0
@@ -45,7 +45,7 @@ def numbetODD(star,end): # counts odd numbers between X(star) and Y(end)
 			i=i+1
 		else:
 			pass
-	print('There is/are '+str(i)+' odd number(s) between '+str(star)+' and '+str(end))
+	return i
 
 def sd(num): # gets the smallest divider
 	for i in range(2,3000000): #looks for the divider from 2 to 3000000 - which is more than enough for nearly all numbers
@@ -69,7 +69,7 @@ def sc(num,nm): # gets the smallest condensor of two numbers
 		dv=isdiv(i,nm)
 		dvv=isdiv(i,num)
 		if dv==True and dvv==True:
-			print('Smallest condensor for '+str(num)+' and '+str(nm)+' is '+str(i))
+			return i
 			break
 		else:
 			i+=1
@@ -85,7 +85,7 @@ def sct(num,nm,nmm): # gets the smallest condensor of three numbers
 		dvv=isdiv(i,num)
 		ddv=isdiv(i,nmm)
 		if dv==True and dvv==True and ddv==True:
-			print('Smallest condensor for '+str(num)+', '+str(nmm)+' and '+str(nm)+' is '+str(i))
+			return i
 			break
 		else:
 			i+=1
@@ -95,7 +95,9 @@ def sct(num,nm,nmm): # gets the smallest condensor of three numbers
 		pass
 
 def sdt(num,nm): # gets the smallest divider of two numbers
-	for i in range(2,3000001): #looks for the divider from 2 to 3000000 - which is more than enough for nearly all numbers
+	if num>nm: x=num
+	else: x=nm
+	for i in range(2,x+1):
 		divv=isdiv(num,i)
 		dvv=isdiv(nm,i)
 		nmnm=False
@@ -114,7 +116,7 @@ def sdt(num,nm): # gets the smallest divider of two numbers
 		print('No divider found')
 
 def sdtr(num,nm,nnm): # gets the smallest divider of three numbers
-	for i in range(2,3000000): #looks for the divider from 2 to 3000000 - which is more than enough for nearly all numbers
+	for i in range(2,3000000): #looks for the divider from 2 to 3000000
 		divv=isdiv(num,i)
 		dvv=isdiv(nm,i)
 		ddv=isdiv(nnm,i)
@@ -152,7 +154,8 @@ def getC(hyp,cath): # same as one above, just reverse
 
 def root(num,pw): # gets Nth root of a number
 	return pow(num,1/pw)
-
+def numcomb(charpos,charnum): #essentially just x^y
+	return charpos**charnum
 if __name__ == '__main__':
 	print("Function summary:")
 	print("divide(divided,divider) - checks if the dividing result gives an intreger")
@@ -169,4 +172,5 @@ if __name__ == '__main__':
 		getH(cathete1,cathete2) - hypothenusys from 2 cathetes
 		getC(hypothenusys,cathete2) - cathete from hypothenusys and other cathete
         root(number,power) - gets Nth root of a number(ex. root(27,3) - 3; root(81,2) - 9)
+	numcomb(charpos,charnum) - get number of possible combinations of X repeatable characters written Y times
         """)
