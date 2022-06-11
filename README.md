@@ -1,7 +1,7 @@
 # math-plus
 Extension of the 'math' module for Python, written in Python, tested in Python and released for Python.
 It aims to expand the standard math module(tho it might add duplicates).
-Function list:
+Function list:\n
 divide(divided,divider) - checks if the dividing result gives an intreger
 numbet(start,end) - prints numbers between $start and $end
 numbetODD(start,end);numbetEVEN(start,end) - self-explanatory
